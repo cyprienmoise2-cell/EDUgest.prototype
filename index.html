@@ -1,1 +1,168 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduGest - Gestion scolaire</title>
+    <link rel="stylesheet" href="style.css">
+</head>
 
+<body>
+
+    <!-- =========================
+         PAGE DE CONNEXION
+    ========================== -->
+    <section id="loginPage" class="login-page">
+
+        <div class="login-card">
+
+            <div class="logo">
+                <div class="logo-icon">E</div>
+                <div>
+                    <h1>EduGest</h1>
+                    <p>Gestion scolaire intelligente</p>
+                </div>
+            </div>
+
+            <h2>Bienvenue</h2>
+            <p class="login-description">
+                Connectez-vous à votre espace
+            </p>
+
+            <form id="loginForm">
+
+                <label>Type de compte</label>
+
+                <select id="userRole">
+                    <option value="admin">Administration</option>
+                    <option value="direction">Direction pédagogique</option>
+                    <option value="economat">Économat / Comptabilité</option>
+                    <option value="enseignant">Enseignant</option>
+                    <option value="parent">Parent</option>
+                </select>
+
+                <label>Identifiant</label>
+                <input
+                    type="text"
+                    id="username"
+                    placeholder="Votre identifiant"
+                    required
+                >
+
+                <label>Mot de passe</label>
+                <input
+                    type="password"
+                    id="password"
+                    placeholder="Votre mot de passe"
+                    required
+                >
+
+                <button type="submit" class="primary-btn">
+                    Se connecter
+                </button>
+
+                <p id="loginMessage" class="login-message"></p>
+
+            </form>
+
+            <div class="demo-info">
+                <strong>Prototype de démonstration</strong>
+                <p>
+                    Vous pouvez utiliser n'importe quel identifiant
+                    et mot de passe pour tester les différents espaces.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         APPLICATION
+    ========================== -->
+
+    <section id="app" class="app hidden">
+
+        <!-- SIDEBAR -->
+
+        <aside class="sidebar">
+
+            <div class="sidebar-logo">
+                <div class="logo-icon">E</div>
+                <div>
+                    <strong>EduGest</strong>
+                    <small>School Platform</small>
+                </div>
+            </div>
+
+            <div class="user-box">
+
+                <div class="user-avatar" id="userAvatar">
+                    A
+                </div>
+
+                <div>
+                    <strong id="userName">Utilisateur</strong>
+                    <small id="userRoleName">Administration</small>
+                </div>
+
+            </div>
+
+            <nav id="sidebarMenu">
+                <!-- Menu généré par JavaScript -->
+            </nav>
+
+            <button id="logoutBtn" class="logout-btn">
+                🚪 Déconnexion
+            </button>
+
+        </aside>
+
+
+        <!-- CONTENU PRINCIPAL -->
+
+        <main class="main-content">
+
+            <header class="topbar">
+
+                <div>
+                    <h2 id="pageTitle">Dashboard</h2>
+                    <p id="pageSubtitle">
+                        Vue générale de votre établissement
+                    </p>
+                </div>
+
+                <div class="topbar-right">
+
+                    <div class="notification">
+                        🔔
+                        <span>3</span>
+                    </div>
+
+                    <div class="school-name">
+                        École Pilote EduGest
+                    </div>
+
+                </div>
+
+            </header>
+
+
+            <!-- DASHBOARD -->
+
+            <div id="dashboardContent">
+
+                <!-- Contenu généré par JavaScript -->
+
+            </div>
+
+        </main>
+
+    </section>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
